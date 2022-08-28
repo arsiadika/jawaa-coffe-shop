@@ -1,0 +1,51 @@
+@media only screen and (max-width: 600px) {
+  .navbar-brand {
+    font-size: 14px !important;
+    font-weight: var(--font-weight-3);
+    font-style: normal;
+    text-transform: uppercase;
+    color: var(--heading-color) !important;
+  }
+  .about-title {
+    font-size: 26px;
+    text-align: center;
+  }
+  .about-image {
+    justify-content: center !important;
+    text-align: center !important;
+    max-width: 300px !important;
+    max-height: 300px !important;
+  }
+  .about-paragraph {
+    width: 313px;
+    font-size: 20px;
+    color: var(--paragraph-color);
+    text-align: center;
+  }
+  #products {
+    margin-top: -50px !important;
+    margin-bottom: 80px;
+  }
+  .product-title h1 {
+    font-size: 26px !important;
+    text-align: center;
+  }
+  .card-body h4 {
+    font-size: 20px;
+    font-weight: var(--font-weight-2);
+    color: var(--secondary-color) !important;
+  }
+  .copyright {
+    width: auto;
+    padding-left: 10%;
+    text-align: center;
+    font-size: 15px !important;
+  }
+  .navbar-toggler {
+    background-image: none !important;
+    outline: 0 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+}

@@ -1,0 +1,426 @@
+/* Template Name: Jawaa-Coffee-Shop
+Template URL: https://jawaa-coffee-shop.netlify.app/
+Author: Muhamad Arsy Adika */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  user-select: none;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-color: #004643;
+  --heading-color: #fffffe;
+  --paragraph-color: #abd1c6;
+  --button-color: #f9bc60;
+  --button-text-color: #001e1d;
+  --secondary-color: #abd1c6;
+  --tertiary-color: #e16162;
+  --font-weight-1: 300;
+  --font-weight-2: 400;
+  --font-weight-3: 700;
+}
+
+body {
+  background-color: var(--bg-color) !important;
+  position: relative;
+  width: auto;
+  height: auto;
+  font-family: "Quicksand", sans-serif !important;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+/* Navbar */
+
+.navbar-expand-lg {
+  width: 100%;
+  padding: 30px !important;
+  background-color: var(--bg-color) !important;
+}
+
+.bg-custom {
+  background-color: #0a090c !important;
+}
+
+.navbar-brand {
+  font-size: 24px !important;
+  font-weight: var(--font-weight-3);
+  font-style: normal;
+  text-transform: uppercase;
+  color: var(--heading-color) !important;
+}
+
+.nav-link {
+  color: #fffffea0 !important;
+  margin: 0 15px 0 15px;
+}
+
+.nav-link:hover {
+  text-decoration: line-through !important;
+  color: var(--heading-color) !important;
+  transition: 0.6s;
+}
+
+.active {
+  text-decoration: line-through !important;
+  color: var(--heading-color) !important;
+}
+
+.navbar-toggler {
+  float: right;
+  border: none;
+  padding-right: 0;
+}
+
+.navbar-toggler:active,
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar .navbar-toggler-icon {
+  width: 24px;
+  height: 17px;
+  background-image: none;
+  position: relative;
+  border-bottom: 1px solid var(--paragraph-color);
+  transition: all 300ms linear;
+}
+
+.navbar .navbar-toggler-icon:after,
+.navbar .navbar-toggler-icon:before {
+  width: 24px;
+  position: absolute;
+  height: 1px;
+  background-color: var(--paragraph-color);
+  top: 0;
+  left: 0;
+  content: "";
+  z-index: 2;
+  transition: all 200ms linear;
+}
+
+.navbar .navbar-toggler-icon:after {
+  top: 8px;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+  transform: translateY(8px) rotate(-45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  border-color: transparent;
+}
+
+.btn-primary {
+  color: var(--button-text-color) !important;
+  font-weight: var(--font-weight-3) !important;
+  padding: 8px 30px 8px 30px !important;
+  border-radius: 5px !important;
+  border-color: #eeab46 !important;
+  background: #eeab46 !important;
+}
+
+.btn-primary:hover {
+  border-color: var(--button-color) !important;
+  background-color: var(--button-color) !important;
+}
+
+.btn:active,
+.btn:focus,
+.btn.active {
+  background-image: none !important;
+  outline: 0 !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Akhir Navbar */
+
+/* Hero */
+
+.about-title {
+  color: var(--heading-color);
+  font-weight: var(--font-weight-3);
+  font-size: 34px;
+  line-height: 45px !important;
+}
+
+.about-paragraph {
+  width: 450px;
+  font-size: 20px;
+  color: var(--paragraph-color);
+  line-height: 32px;
+}
+
+.about-image {
+  cursor: none;
+  max-width: 500px !important;
+  max-height: 500px !important;
+}
+
+/* Akhir Hero */
+
+/* Product */
+
+#products {
+  margin-bottom: 100px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  cursor: grab;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide:active {
+  cursor: grabbing;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--button-color) !important;
+}
+
+.swiper-cards {
+  background-color: transparent !important;
+  border: transparent !important;
+}
+
+.card-body h4 {
+  font-size: 24px;
+  font-weight: var(--font-weight-2);
+  color: var(--secondary-color) !important;
+}
+
+.product-title h1 {
+  font-size: 34px !important;
+  font-weight: var(--font-weight-3);
+  line-height: 45px;
+  color: var(--heading-color);
+}
+
+/* Akhir Product */
+
+/* Contact Us */
+
+#contacts {
+  margin-bottom: 100px !important;
+  text-align: center !important;
+  align-items: center !important;
+}
+
+.contact-title {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 44px !important;
+  font-weight: var(--font-weight-3);
+  line-height: 45px;
+  color: var(--heading-color);
+}
+
+.social-media a {
+  margin: 0 20px 0 20px !important;
+  text-decoration: none;
+  font-size: 34px !important;
+  color: var(--paragraph-color) !important;
+}
+
+.social-media a:hover {
+  transition: 0.6s !important;
+  color: #0a090c !important;
+}
+
+/* Akhir Contact Us */
+
+/* Footer */
+
+.footer-layout {
+  border-top: 2px solid var(--paragraph-color) !important;
+}
+
+.copyright {
+  color: var(--secondary-color);
+}
+
+.footer-nav a {
+  text-decoration: none;
+  font-size: 24px;
+  color: var(--secondary-color);
+}
+
+.footer-nav a:hover {
+  transition: 0.6s;
+  color: var(--tertiary-color) !important;
+}
+
+/* Akhir Footer */
+
+/* Product Page */
+
+.section-products {
+  padding: 80px 0 54px;
+}
+
+.section-products .header {
+  margin-bottom: 50px;
+}
+
+.section-products .header h2 {
+  font-size: 2.2rem;
+  font-weight: var(--font-weight-3);
+  color: var(--heading-color);
+}
+
+.section-products .single-product {
+  margin-bottom: 90px;
+}
+
+.section-products .single-product .part-1 {
+  position: relative;
+  height: 290px;
+  max-height: 290px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 10px !important;
+}
+
+.section-products .single-product .part-1::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.section-products .single-product:hover .part-1::before {
+  transform: scale(1.2, 1.2) rotate(5deg);
+  filter: grayscale(0%) !important;
+  transition: 0.6s !important;
+  border-radius: 10px !important;
+}
+
+.section-products #product-1 .part-1::before {
+  background: url("/assets/img/kopi-1.jpg") no-repeat center;
+  filter: grayscale(100%);
+  background-size: cover;
+  transition: all 0.6s;
+  border-radius: 10px !important;
+}
+
+.section-products #product-2 .part-1::before {
+  background: url("/assets/img/kopi-2.jpg") no-repeat center;
+  background-size: cover;
+  filter: grayscale(100%);
+  border-radius: 10px !important;
+}
+
+.section-products #product-3 .part-1::before {
+  background: url("/assets/img/kopi-3.jpg") no-repeat center;
+  background-size: cover;
+  filter: grayscale(100%);
+  border-radius: 10px !important;
+}
+
+.section-products #product-4 .part-1::before {
+  background: url("/assets/img/kopi-4.jpg") no-repeat center;
+  background-size: cover;
+  filter: grayscale(100%);
+  border-radius: 10px !important;
+}
+
+.section-products .single-product .part-1 .discount,
+.section-products .single-product .part-1 .new {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  color: #ffffff;
+  background-color: var(--tertiary-color);
+  padding: 2px 8px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.section-products .single-product .part-1 .new {
+  left: 0;
+  background-color: var(--bg-color);
+}
+
+.part-2 h3 {
+  font-size: 24px !important;
+  color: var(--paragraph-color);
+}
+
+.section-products .single-product .part-2 .product-title {
+  font-size: 1rem;
+}
+
+.section-products .single-product .part-2 h4 {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.section-products .single-product .part-2 .product-old-price {
+  position: relative;
+  padding: 0 7px;
+  margin-right: 2px;
+  opacity: 0.6;
+}
+
+.section-products .single-product .part-2 .product-old-price::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #444444;
+  transform: translateY(-50%);
+}
